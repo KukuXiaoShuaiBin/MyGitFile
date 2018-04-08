@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/HibernateConfiguration DTD 3.0//EN"
+       "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+	<session-factory>
+
+		<!-- 数据库连接信息 -->
+
+		<property name="hibernate.connection.driver_class">
+			com.mysql.jdbc.Driver
+		</property>
+
+		<property name="hibernate.connection.url">
+			jdbc:mysql://127.0.0.1:3306/gumpdb
+		</property>
+
+		<property name="hibernate.connection.username">
+			root
+		</property>
+
+		<property name="connection.password">
+			root
+		</property>
+
+		<!-- hibernate配置信息 -->
+
+		<!-- SQL dialect 方言，用于配置生成针对哪个数据库的 -->
+
+		<property name="dialect">
+
+			<!-- 方言类，Hibernate提供的，用于封装某种特定的 -->
+
+			org.hibernate.dialect.MySQL5Dialect
+
+		</property>
+
+		<!-- 生成的sql是否打印到控制台 -->
+
+		<property name="show_sql">
+			true
+		</property>
+
+		<!-- 打印的sql是否进行格式化 -->
+
+		<property name="format_sql">
+			true
+		</property>
+
+		<!-- 在配置文件中关联映射文件 -->
+
+		<!-- <mappingresource=""/> -->
+
+	</session-factory>
+
+</hibernate-configuration>
